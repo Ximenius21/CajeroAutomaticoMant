@@ -1,5 +1,7 @@
 package Proyecto_Terminado;
 
+import java.util.ArrayList;
+
 public class Transferencia extends Clase_Abstractaa {
 
     public Transferencia(String idTransaccion, String fecha, String tipo, double monto, String cuentaDestino){
@@ -7,14 +9,14 @@ public class Transferencia extends Clase_Abstractaa {
     }
 
 	//METODO TRANSFERENCIA PARAMETROS CUENTAORIGEN, CUENTADESTINO, TIPO Y MONTO
-    public void Transacciones(String cuentaOrigen,String cuentaDestino, String tipo, double monto) {
+    public void Transacciones(String cuentaOrigen,String cuentaDestino, String tipo, double monto, Banco banco) {
     			System.out.print("Cuanto quieres Transferir: ");
-                Transferir(cuentaOrigen, cuentaDestino, tipo, monto);
+                Transferir(cuentaOrigen, cuentaDestino, tipo, monto, banco);
     }
-    public void Transferir(String cuentaOrigen,String cuentaDestino, String tipo, double monto){
-        Cliente cte = new Cliente();
-		Cliente cte2 = cte.obtenerCliente(cuentaOrigen);
-        Cliente cte3 = cte.obtenerCliente(cuentaDestino);
+    
+    public void Transferir(String cuentaOrigen,String cuentaDestino, String tipo, double monto, Banco banco){
+    	ArrayList<Cuentas> listaCuenta = banco.getListaCuentas();
+		Cuentas cta = ObtenerDatosCuentas(listaCuenta, cuenta, tipo);
 		
 
         if (monto <= cte2.getSaldo()) {
@@ -34,6 +36,16 @@ public class Transferencia extends Clase_Abstractaa {
             System.out.println("=====================");
         }
     }
+    
+    public Cuentas ObtenerDatosCuentas(ArrayList<Cuentas> listaCuenta, String numCuenta, String tipo) {
+		
+		for (Cuentas cuentas : listaCuenta) {
+			if(cuentas.getTarjeta().getnumeroCuenta().equals(numCuenta) && cuentas.getTipo().equals(tipo)) {			
+				return cuentas;
+			}
+		}	
+		return null;
+	}
 
 
 }
