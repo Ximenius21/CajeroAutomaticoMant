@@ -53,5 +53,5 @@ public abstract class Clase_Abstractaa {
         this.monto=monto;
     }
        
-    public abstract void Transacciones(String cuenta, String tipo, double monto);
+    public abstract void Transacciones(String cuenta, String cuentaDestino, String tipo, double monto);
 }
