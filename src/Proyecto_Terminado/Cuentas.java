@@ -17,11 +17,9 @@ public class Cuentas {
     public String Tipo(){
         return Tipo;
     }
-
     public void setTipo(String Tipo){
         this.Tipo=Tipo;
     }
- 
     public String getNumCuenta(){
         return NumCuenta;
     }
