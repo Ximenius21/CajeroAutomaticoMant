@@ -7,7 +7,9 @@ public class Main {
 	static Scanner entrada = new Scanner(System.in);
 	static ArrayList<Cliente> listaCliente;
     public static void main(String[] args) {
-    	ArrayList<Cliente> listaCliente = new ArrayList<Cliente>();
+        Cajero cajero=new Cajero("Centro", null)
+
+        ArrayList<Cliente> listaCliente = new ArrayList<Cliente>();
     	
     	listaCliente.add(new Cliente("Ximena Hernandez", "Cuenta Ahorro", "12345678", 2104, 1700.00));
     	listaCliente.add(new Cliente("Kimberly Huape", "Cuenta Ahorro", "46372689", 9802, 1700.00));

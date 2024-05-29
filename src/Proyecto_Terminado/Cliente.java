@@ -3,12 +3,10 @@ package Proyecto_Terminado;
 import java.util.ArrayList;
 
 public class Cliente {
-
+	private int Id;
+	private String Direccion;
 	private String NombreCte;
-	private String Tipo;
-	private String NumCuenta;
-	private int Nip;
-	private double Saldo;
+	
 	private ArrayList<Cliente> listaClientes = new ArrayList<>();
 	 
 	
