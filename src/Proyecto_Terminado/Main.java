@@ -9,15 +9,31 @@ public class Main {
     public static void main(String[] args) {
         Cajero cajero=new Cajero("Centro", "Banco Centro");
         
+  
+        ArrayList<Tarjeta> listaTarjetas = new ArrayList<Tarjeta>();
+        Cliente cte1 = new Cliente(1, "Mariano 2965, Lopez", "Ximena Hernandez");
+        Cliente cte2 = new Cliente(2, "Carlon 2893, Rincon", "Kimberly Romero");
+        Cliente cte3 = new Cliente(3, "Lopez 2839, Adolfo", "Yahir Ramirez");
+        Cliente cte4 = new Cliente(4, "Valle Alto 1802, Alto", "Esmeralda Montoya");
         
-
-        ArrayList<Cliente> listaCliente = new ArrayList<Cliente>();
-        listaCliente.add
-    	listaCliente.add(new Cliente("Ximena Hernandez", "Cuenta Ahorro", "12345678", 2104, 1700.00));
-    	listaCliente.add(new Cliente("Kimberly Huape", "Cuenta Ahorro", "46372689", 9802, 1700.00));
-    	listaCliente.add(new Cliente("Yahir Ramirez", "Cuenta Cheques", "73664839", 9000, 1700.00));
-    	listaCliente.add(new Cliente("Esmeralda Montoya", "Cuenta Cheques", "12238558", 3022, 1700.00));
-    	
+        
+        Cuentas cuenta1 = new Cuentas("Cuenta Ahorro", "19283888", cte1, 1700.00);
+        Cuentas cuenta2 = new Cuentas("Cuenta Ahorro", "89233728", cte2, 1700.00);
+        Cuentas cuenta3 = new Cuentas("Cuenta Ahorro", "09283748", cte3, 1700.00);
+        Cuentas cuenta4 = new Cuentas("Cuenta Ahorro", "63527382", cte4, 1700.00);
+        
+        Tarjeta tarjeta1 = new Tarjeta("19283888", cte1, 2829 );
+        Tarjeta tarjeta2 = new Tarjeta("89233728", cte2, 2783);
+        Tarjeta tarjeta3 = new Tarjeta("09283748", cte3, 2999);
+        Tarjeta tarjeta4 = new Tarjeta("63527382", cte4, 1234);
+        
+        listaTarjetas.add(tarjeta1);
+        listaTarjetas.add(tarjeta2);
+        listaTarjetas.add(tarjeta3);
+        listaTarjetas.add(tarjeta4);
+        
+        Banco banco = new Banco("Banco Centro", listaTarjetas);
+ 	
     	Menu();
        
     }
@@ -27,42 +43,43 @@ public class Main {
     	int idRetirar = 0;
     	int idTransferir = 0;
     	
+    	
+    	
     	int op=0;
     	System.out.println("=========================================");
 		System.out.println("		CAJERO AUTOMATICO	");
+		System.out.println("=========================================");
+		
+        
+        
     	do {
+    		System.out.println(" Ingrese su Numero de cuenta:(numero tarjeta): ");
+            String Num_cuenta = entrada.nextLine();
+            System.out.println(" Ingrese Tipo Cuenta: (ahorro o cheques)");
+            String Tipo_cuenta = entrada.nextLine();
     		
     		System.out.println("=========================================");
         	System.out.println("	1. Retirar ");
         	System.out.println("	2. Transferir");
         	System.out.println("=========================================");
-        	System.out.println("Ingresa opcion: ");
+        	System.out.println(" Ingresa opcion: ");
         	op = entrada.nextInt();
         	if(op == 1) {
         		System.out.println("----------------------------------------------------");
-                System.out.println("Ingrese su Nombre: ");
-                String Nombre = entrada.nextLine();
-                System.out.println("Ingrese su Numero de cuenta: ");
-                String Num_cuenta = entrada.nextLine();
                 System.out.println("Ingrese su Nip:		(8002)");
                 int Nip = entrada.nextInt();
                 System.out.println("Ingresa el Monto: ");
                 double monto = entrada.nextDouble();
                 //BUSCAR EL CTE EN LA LISTA DE CLIENTES
-                Cliente cte = new Cliente();
-                Cliente cte2 = cte.obtenerCliente(Nombre);
                 
                 idRetirar++;
                 Retiro retirar = new Retiro(String.valueOf(idRetirar), "28/05/2024", "Retiro", monto);
-                retirar.Transacciones(Num_cuenta,null, cte2.getTipo(), monto);
-                
-                
+                retirar.Transacciones(Num_cuenta,null, Tipo_cuenta, monto);
+                              
         	}else if(op == 2) {
 				System.out.println("----------------------------------------------------");
                 System.out.println("Ingrese su Nombre: ");
                 String Nombre = entrada.nextLine();
-                System.out.println("Ingrese su Numero de cuenta: ");
-                String Num_cuenta = entrada.nextLine();
                 System.out.println("Ingrese su Nip:		(8002)");
                 int Nip = entrada.nextInt();
                 System.out.println("Ingresa el Monto: ");
