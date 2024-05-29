@@ -2,6 +2,7 @@ package Proyecto_Terminado;
 
 public class Transferencia extends Clase_Abstractaa {
 
+	//METODO TRANSFERENCIA PARAMETROS CUENTAORIGEN, CUENTADESTINO, TIPO Y MONTO
     @Override
     public void Transacciones() {
     			System.out.print("Cuanto quieres Transferir: ");

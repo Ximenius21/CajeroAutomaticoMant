@@ -1,13 +1,13 @@
 package Proyecto_Terminado;
 
-import java.util.Scanner;
+
 public abstract class Clase_Abstractaa {
 	private String idTransaccion;
     private String fecha;
     private String tipo;
     private double monto;
 
-    public void Operaciones(String idTransaccion, String fecha, String tipo, double monto) {
+    public Clase_Abstractaa(String idTransaccion, String fecha, String tipo, double monto) {
        this.idTransaccion=idTransaccion;
        this.fecha=fecha;
        this.tipo=tipo;
@@ -43,4 +43,5 @@ public abstract class Clase_Abstractaa {
         this.monto=monto;
     }
        
+    public abstract void Transacciones(String cuenta, String tipo, double monto);
 }
