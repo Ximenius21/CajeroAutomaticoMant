@@ -16,7 +16,7 @@ public class Transferencia extends Clase_Abstractaa {
     
     public void Transferir(String cuentaOrigen,String cuentaDestino, String tipo, double monto, Banco banco){
     	ArrayList<Cuentas> listaCuenta = banco.getListaCuentas();
-		Cuentas cta = ObtenerDatosCuentas(listaCuenta, cuenta, tipo);
+		Cuentas cta = ObtenerDatosCuentas(listaCuenta, cuentaOrigen, tipo);
 		
 
         if (monto <= cte2.getSaldo()) {
