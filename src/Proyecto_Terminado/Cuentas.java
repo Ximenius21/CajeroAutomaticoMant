@@ -2,32 +2,32 @@ package Proyecto_Terminado;
 
 public class Cuentas {
     private String Tipo;
-	private String NumCuenta;
+	private Tarjeta tarjeta;
     private Cliente cliente;
     private double Saldo;
 	//private int Nip;
 	//private double Saldo;
 
 
-    public Cuentas(String Tipo, String NumCuenta, Cliente cliente, double Saldo){
+    public Cuentas(String Tipo, Tarjeta tarjeta, Cliente cliente, double Saldo){
         this.Tipo=Tipo;
-        this.NumCuenta=NumCuenta;
+        this.tarjeta=tarjeta;
         this.cliente=cliente;
         this.Saldo = Saldo;
     }
 
-    public String Tipo(){
+    public String getTipo(){
         return Tipo;
     }
     public void setTipo(String Tipo){
         this.Tipo=Tipo;
     }
-    public String getNumCuenta(){
-        return NumCuenta;
+    public Tarjeta getTarjeta(){
+        return tarjeta;
     }
 
-    public void setNumCuenta(String NumCuenta){
-        this.NumCuenta=NumCuenta;
+    public void setTarjetaa(Tarjeta tarjeta){
+        this.tarjeta = tarjeta;
     }
 
     public Cliente getcliente(){
@@ -38,8 +38,8 @@ public class Cuentas {
         this.cliente=cliente;
     }
 
-    public Cliente getSaldo(){
-        return cliente;
+    public double getSaldo(){
+        return this.Saldo;
     }
 
     public void setSaldo(double Saldo){

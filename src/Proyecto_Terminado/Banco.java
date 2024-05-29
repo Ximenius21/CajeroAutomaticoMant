@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Banco {
 	
 	private String Nombre;
-	private ArrayList<Tarjeta> listaTarjetas;
+	private ArrayList<Cuentas> listaCuentas;
 	
 	
 	
-	public Banco(String Nombre, ArrayList<Tarjeta> lista) {
+	public Banco(String Nombre, ArrayList<Cuentas> lista) {
 		this.Nombre=Nombre;
-		listaTarjetas = lista;
+		listaCuentas = lista;
 	}
 	
 	public String getNombre(){
@@ -23,8 +23,8 @@ public class Banco {
         this.Nombre = Nombre;
     }
     
-    public ArrayList<Tarjeta> getListaTarjetas(){
-    	return listaTarjetas;
+    public ArrayList<Cuentas> getListaCuentas(){
+    	return listaCuentas;
     }
 
 }

@@ -6,9 +6,8 @@ public class Tarjeta {
     private int nip;
 
 
-    public Tarjeta(String numeroCuenta, Cliente cliente, int nip){
+    public Tarjeta(String numeroCuenta, int nip){
         this.numeroCuenta=numeroCuenta;
-        this.cliente=cliente;
         this.nip = nip;
     }
 
@@ -20,13 +19,6 @@ public class Tarjeta {
         this.numeroCuenta=numeroCuenta;
     }
  
-    public Cliente getcliente(){
-        return cliente;
-    }
-
-    public void setcliente(Cliente cliente){
-        this.cliente=cliente;
-    }
     public Cliente getNip(){
         return cliente;
     }
