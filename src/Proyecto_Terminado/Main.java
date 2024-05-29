@@ -50,7 +50,7 @@ public class Main {
                 
                 idRetirar++;
                 Retiro retirar = new Retiro(String.valueOf(idRetirar), "28/05/2024", "Retiro", monto);
-                retirar.Transacciones(Num_cuenta, cte2.getTipo(), monto);
+                retirar.Transacciones(Num_cuenta,null, cte2.getTipo(), monto);
                 
                 
         	}else if(op == 2) {

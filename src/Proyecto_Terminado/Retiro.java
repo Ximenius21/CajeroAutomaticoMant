@@ -7,8 +7,8 @@ public class Retiro extends Clase_Abstractaa {
 		super(idTransaccion, fecha, tipo, monto);
 		// TODO Auto-generated constructor stub
 	}
-	
-	public void Transacciones(String cuenta, String tipo, double monto) {
+	@Override
+	public void Transacciones(String cuenta,String cuentaDestino, String tipo, double monto) {
 		 Retirar(cuenta, tipo, monto);	
 	}
 
