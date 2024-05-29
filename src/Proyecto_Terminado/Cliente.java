@@ -9,16 +9,12 @@ public class Cliente {
 	
 	private ArrayList<Cliente> listaClientes = new ArrayList<>();
 	 
-	
-	public Cliente(String NombreCte, String Tipo, String NumCuenta, int Nip, double Saldo) {
-		this.NombreCte = NombreCte;
-		this.Tipo = Tipo;
-		this.NumCuenta = NumCuenta;
-		this.Nip = Nip;	
-		this.Saldo = Saldo;
-		listaClientes.add(this);
-		
+	public Cliente(int Id, String Direccion, String NombreCte) {
+		this.Id=Id;
+		this.Direccion=Direccion;
+		this.NombreCte=NombreCte;
 	}
+	
 	
 	public Cliente() {
 		// TODO Auto-generated constructor stub
@@ -40,37 +36,6 @@ public class Cliente {
 		NombreCte = nombreCte;
 	}
 
-	public String getTipo() {
-		return Tipo;
-	}
-
-	public void setTipo(String tipo) {
-		Tipo = tipo;
-	}
-
-	public String getNumCuenta() {
-		return NumCuenta;
-	}
-
-	public void setNumCuenta(String numCuenta) {
-		NumCuenta = numCuenta;
-	}
-
-	public int getNip() {
-		return Nip;
-	}
-
-	public void setNip(int nip) {
-		Nip = nip;
-	}
-	
-	public double getSaldo() {
-		return Saldo;
-	}
-
-	public void setSaldo(double saldo) {
-		Saldo = saldo;
-	}
 	
 	public Cliente obtenerCliente(String nombre) {
 		

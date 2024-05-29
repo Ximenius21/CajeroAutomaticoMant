@@ -13,8 +13,7 @@ public class Retiro extends Clase_Abstractaa {
 	}
 
 	public void Retirar(String cuenta, String tipo, double monto) {
-		Cliente cte = new Cliente();
-		Cliente cte2 = cte.obtenerCliente(cuenta);
+		
 		 
 		//Retirar dinero de cuenta
 		if(monto <= cte2.getSaldo()) {
