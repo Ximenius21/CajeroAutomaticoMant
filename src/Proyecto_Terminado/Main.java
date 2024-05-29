@@ -54,7 +54,24 @@ public class Main {
                 
                 
         	}else if(op == 2) {
-        		
+				System.out.println("----------------------------------------------------");
+                System.out.println("Ingrese su Nombre: ");
+                String Nombre = entrada.nextLine();
+                System.out.println("Ingrese su Numero de cuenta: ");
+                String Num_cuenta = entrada.nextLine();
+                System.out.println("Ingrese su Nip:		(8002)");
+                int Nip = entrada.nextInt();
+                System.out.println("Ingresa el Monto: ");
+                double monto = entrada.nextDouble();
+				System.out.println("Ingrese la cuenta de destino:");
+				String Num_cuentaDes= entrada.nextLine();
+                //BUSCAR EL CTE EN LA LISTA DE CLIENTES
+                Cliente cte = new Cliente();
+                Cliente cte2 = cte.obtenerCliente(Nombre);
+                
+                idTransferir++;
+                Transferencia transferir = new Transferencia(String.valueOf(idTransferir), "28/05/2024", "Transferir", monto, Num_cuentaDes);
+                transferir.Transacciones(Num_cuenta,Num_cuentaDes, cte2.getTipo(), monto);
         	}
         	
     	}while(op!=0);

@@ -6,6 +6,7 @@ public abstract class Clase_Abstractaa {
     private String fecha;
     private String tipo;
     private double monto;
+    private String cuentaDestino;
 
     public Clase_Abstractaa(String idTransaccion, String fecha, String tipo, double monto) {
        this.idTransaccion=idTransaccion;
@@ -13,6 +14,15 @@ public abstract class Clase_Abstractaa {
        this.tipo=tipo;
        this.monto=monto;
     }
+
+    public Clase_Abstractaa(String idTransaccion, String fecha, String tipo, double monto, String cuentaDestino) {
+        this.idTransaccion=idTransaccion;
+        this.fecha=fecha;
+        this.tipo=tipo;
+        this.monto=monto;
+        this.cuentaDestino=cuentaDestino;
+     }
+ 
 
     public String getIdTransaccion(){
         return idTransaccion;
